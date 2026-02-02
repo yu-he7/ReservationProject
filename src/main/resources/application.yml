@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: accommodation
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/accommodation?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+    username: accoheej
+    password: "hjmj0723@@"
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+        # 비관적 락 타임아웃 설정 (밀리초, 10초)
+        jakarta.persistence.lock.timeout: 10000
+        # 데드락 감지 및 처리
+        query.fail_on_pagination_over_collection_fetch: true
+    show-sql: true
+#  data:
+#    redis:
+#      host: localhost
+#      port: 6379
+
+jwt:
+  secret: mySecretKeyForJWTTokenGenerationAndValidation1234567890
+  expiration: 86400000
+  access-token-expiration: 3600000
+  refresh-token-expiration: 604800000
+
+logging:
+  level:
+    org:
+      springframework: info
+      hibernate: info
+      zerock: debug
+
+# 공휴일 API 설정
+public-holiday:
+  api:
+    url: http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo
+    service-key: puufIdyervphKPB1dDcSp2nzeFh0CNq9RPu4pgKBVkVOjgZ7A6hbgajsn779EYXCyvckPPZolarl6VwBCmXCMQ==

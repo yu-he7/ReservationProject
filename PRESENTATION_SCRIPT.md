@@ -1,6 +1,6 @@
 # 숙소 예약 시스템 - 프로젝트 발표 대본
 
-## 1️⃣ 프로젝트 소개 (30초)
+## 1️ 프로젝트 소개 (30초)
 
 안녕하세요. 제가 개발한 프로젝트는 **공휴일 자동 체크 기능이 있는 숙소 예약 시스템**입니다.
 
@@ -15,7 +15,7 @@
 
 ---
 
-## 2️⃣ 아키텍처 설명 (1분)
+## 2️ 아키텍처 설명 (1분)
 
 Clean Architecture를 적용하여 **도메인별로 레이어를 명확히 분리**했습니다.
 
@@ -42,9 +42,9 @@ config/    → JPA, Redis, Security 등 전역 설정
 
 ---
 
-## 3️⃣ 핵심 기능 (2분)
+## 3️ 핵심 기능 (2분)
 
-### 🔐 1. JWT 인증 시스템
+### 1. JWT 인증 시스템
 
 **왜 JWT를 선택했나요?**
 - 서버에 세션을 저장하지 않아 확장성이 좋습니다 (Stateless)
@@ -60,7 +60,7 @@ config/    → JPA, Redis, Security 등 전역 설정
 2. API 요청 시 → JwtAuthenticationFilter가 토큰 검증
 3. 토큰 만료 시 → Refresh Token으로 재발급
 
-### 🗓️ 2. 공휴일 API 연동
+### 2. 공휴일 API 연동
 
 **구현 내용**:
 - 공공데이터포털의 **특일정보 API**를 RestTemplate로 호출
@@ -89,7 +89,7 @@ Optional<Room> findByIdForUpdate(Long roomId);
 
 ---
 
-## 4️⃣ 주요 API (30초)
+## 4️ 주요 API (30초)
 
 총 4개 도메인으로 구성했습니다:
 
@@ -107,7 +107,7 @@ Optional<Room> findByIdForUpdate(Long roomId);
 
 ---
 
-## 5️⃣ 어려웠던 점과 해결 과정 (1분)
+## 5️ 어려웠던 점과 해결 과정 (1분)
 
 ### 1. JWT 토큰 갱신 로직
 **문제**: Refresh Token도 만료되면 어떻게 처리?  
@@ -123,7 +123,7 @@ Optional<Room> findByIdForUpdate(Long roomId);
 
 ---
 
-## 6️⃣ 마무리 (20초)
+## 6️ 마무리 (20초)
 
 이번 프로젝트를 통해:
 - **실무에서 사용하는 JWT 인증 시스템**을 직접 구현했습니다
@@ -136,7 +136,7 @@ Optional<Room> findByIdForUpdate(Long roomId);
 
 ---
 
-## 📊 발표 시간 배분 (총 5분)
+## 발표 시간 배분 (총 5분)
 
 | 섹션 | 시간 |
 |------|------|
@@ -149,7 +149,7 @@ Optional<Room> findByIdForUpdate(Long roomId);
 
 ---
 
-## 🎤 발표 팁
+## 발표 팁
 
 ### 시연 준비
 - [ ] Postman으로 API 호출 시연
@@ -157,10 +157,10 @@ Optional<Room> findByIdForUpdate(Long roomId);
 - [ ] JWT 토큰 갱신 과정 시연
 
 ### 강조할 키워드
-- ✅ Clean Architecture
-- ✅ JWT (Access + Refresh Token)
-- ✅ Open API 연동
-- ✅ 비관적 락 (동시성 제어)
+- Clean Architecture
+- JWT (Access + Refresh Token)
+- Open API 연동
+- 비관적 락 (동시성 제어)
 
 ### 예상 질문 대비
 1. **"왜 낙관적 락이 아니라 비관적 락을 썼나요?"**
@@ -180,7 +180,7 @@ Optional<Room> findByIdForUpdate(Long roomId);
 
 ---
 
-## 📝 기존 대본과의 주요 차이점
+## 기존 대본과의 주요 차이점
 
 | 항목 | 기존 대본 | 개선된 대본 |
 |------|-----------|-------------|
@@ -190,4 +190,5 @@ Optional<Room> findByIdForUpdate(Long roomId);
 | **스토리** | 단순 나열 | "문제 → 해결" 구조로 흥미 유발 |
 | **시각성** | 텍스트만 | 코드 스니펫, 구조 다이어그램 추가 |
 | **시간 관리** | 불명확 | 섹션별 시간 배분 명시 |
+
 

@@ -292,8 +292,6 @@ curl -X POST http://localhost:8080/api/reservations \
 
 ## 프로젝트 평가
 
-### 종합 평가: 85/100점 (매우 우수)
-
 | 항목 | 점수 | 평가 |
 |------|------|------|
 | 기능 완성도 | 9/10 | 핵심 요구사항 모두 구현 |
@@ -319,12 +317,11 @@ curl -X POST http://localhost:8080/api/reservations \
    - Springdoc OpenAPI 적용
    - Try it out 기능
 
-#### 중간 우선순위 (권장)
+#### 중간 우선순위
 4. 리뷰 및 평점 시스템
 5. 관리자 기능 강화
 6. 이메일 알림
 
-자세한 내용은 [PROJECT_EVALUATION.md](PROJECT_EVALUATION.md)를 참조하세요.
 
 ## 학습 포인트
 
@@ -354,10 +351,6 @@ curl -X POST http://localhost:8080/api/reservations \
 - 도메인 주도 설계 (DDD)
 - 레이어 분리 (api, usecase, model, infra)
 - 의존성 역전 원칙
-
-## 문의
-
-프로젝트 관련 문의사항이 있으시면 연락주세요.
 
 ## 라이선스
 

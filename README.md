@@ -206,7 +206,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/accommodation?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
     username: accoheej
-    password: hjmj0723@@
+    password: 비밀번호
 
 jwt:
   secret: mySecretKeyForJWTTokenGenerationAndValidation1234567890

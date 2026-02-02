@@ -48,7 +48,6 @@ JWT 인증 시스템과 Open API 연동을 실습하기 위해 6주간 개발한
 ### Database
 - Database: MySQL 8.x
 - ORM: JPA / Hibernate
-- Migration: Flyway
 
 ### Security
 - Authentication: Spring Security + JWT
@@ -62,8 +61,6 @@ JWT 인증 시스템과 Open API 연동을 실습하기 위해 6주간 개발한
 ### Others
 - Scheduler: Spring Scheduler
 - Validation: Jakarta Validation
-- Logging: SLF4J + Logback
-- Lombok: 코드 간소화
 
 ## 프로젝트 구조
 
@@ -111,8 +108,6 @@ src/main/java/heej/net/
 
 src/main/resources/
 ├── application.yml                            # 설정 파일
-└── db/migration/
-    └── V4__add_amenities_to_rooms.sql         # Flyway 마이그레이션
 ```
 
 ---
@@ -126,10 +121,8 @@ src/main/resources/
 #### 1. [PROJECT_EVALUATION.md](PROJECT_EVALUATION.md)
 6주 프로젝트 종합 평가 및 분석 보고서
 - 구현된 모든 기능 목록
-- 아키텍처 평가 (85/100점)
 - 강점과 개선 필요 사항
 - 추가로 구현하면 좋을 기능 (우선순위별)
-- 선임님께 보여드릴 때 강조할 포인트
 
 #### 2. [API_COMPLETE_DOCUMENTATION.md](API_COMPLETE_DOCUMENTATION.md)
 전체 API 명세서 (상세)
@@ -202,7 +195,7 @@ mysql -u root -p
 CREATE DATABASE accommodation CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- 사용자 생성 및 권한 부여
-CREATE USER 'accoheej'@'localhost' IDENTIFIED BY 'hjmj0723@@';
+CREATE USER 'accoheej'@'localhost' IDENTIFIED BY '비밀번호';
 GRANT ALL PRIVILEGES ON accommodation.* TO 'accoheej'@'localhost';
 FLUSH PRIVILEGES;
 ```
